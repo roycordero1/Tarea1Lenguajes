@@ -7,9 +7,12 @@
 		<title>QuizShow</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+		<link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
+
 		<script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fquery.js" ></script>
 		<script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
-		
+
 		<style type="text/css">
 			/*Dimensiones del desktop*/
 			@media (min-width: 980px) {
@@ -17,12 +20,56 @@
 					padding-top: 60px;
 				}
 			}
+
+			/*Landscape y telefonos*/
+			@media (max-width: 480) {
+				.copy {
+					padding: 2.5% 10%;
+				}
+			}
+
+			/*Encabezados y cuerpo principal*/
+			body {
+				font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+			}
+			.heading, .subheading {
+				font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+				text-align: center;
+			}
+			p.lead {
+				padding-top: 1.5%;
+				font-size: 24px;
+				line-height: 30px;
+			}
+			p {
+				font-size: 18px;
+				line-height: 24px;
+			}
+
+			/*Pitch y accion*/
+			.pitch {
+				padding: 2.5 0%;
+			}
+			.actions {
+				padding: 3% 0%;
+			}
+			.footer {
+				color: #cccccc;
+				text-align: center;				
+			}
+			.footer p {
+				font-size: 11px;
+			}
+			.footer a {
+				color: #ccccff;
+			}
+
 		</style>
-		
+
 	</head>
 
 	<body>
-		
+
 		<!-- http://twitter.github.io/bootstrap/examples/starter-template.html-->
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
@@ -44,7 +91,52 @@
 			</div>
 		</div>
 
-	</body>
+		<div class="container">
+			<div class="row-fluid heading">
+				<div class="span12">
+					<h1>QuizShow</h1>
+				</div>
+			</div>
+			<div class="row-fluid subheading">
+				<div class="span12">
+					<p class="lead">Lenguajes de Programación</p>
+				</div>
+			</div>
+			<div class="row-fluid pitch">
+				<div class="span5 offset1 copy copy-right">
+					<p>
+						Aquí va el texto de la pregunta que se debe hacer
+						la idea es que el javascript lo debe cargar
+						dinámicamente del archivo de configuración
+						de JSON.
+					</p>
+				</div>
+				<div class="span5 actions">
+					<div class="span10 offset1">
+						<form method="post">
+							<fieldset>
+								<legend>¿Cuál es su animal favorito?</legend>
+								<input type="checkbox" name="animal" value="perro" />Perro <br />
+								<input type="checkbox" name="animal" value="gato" />Gato <br />
+								<input type="checkbox" name="animal" value="pajaro" />Pajaro <br />
+								<input type="submit" value="Submit now" />
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="row-fluid footer">
+				<div class="span12">
+					<p>
+						Este trabajado está licenciado por
+						the <a href="http://creativecommons.org/licenses/by-sa/3.0/"> 
+							By-SA 3.0
+						</a>, creative commons
+					</p>
+				</div>
+			</div>
+		</div>
 
+	</body>
 
 </html>
